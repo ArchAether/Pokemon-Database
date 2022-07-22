@@ -1,0 +1,12 @@
+.header {
+    background-color: #1F1B24;
+    text-align: left;
+    padding: 1em;
+}
+a {
+    color: #e2e2e2;
+    font-size: xx-large;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1em;
+  }
