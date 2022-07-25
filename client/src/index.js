@@ -29,7 +29,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} >
-        <Route path='testpage' element={<TestComponent />} />
+        <Route index element={<TestComponent />} />
         <Route path='tablecomponent' element={<TableComponent columns={columns} />} />
         <Route path='details' element={<DetailPage />} />
       </Route>

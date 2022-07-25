@@ -12,7 +12,7 @@ function App() {
           backgroundColor:"#00495c"
         }}
       >
-        <Link to="/testpage"><b>Home</b></Link> |{" "}
+        <Link to="/"><b>Home</b></Link> |{" "}
         <Link to="/tablecomponent"><b>Pokedex</b></Link> |{" "}
         <Link to='/details'><b>Detail</b></Link>
       </nav>
