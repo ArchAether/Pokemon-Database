@@ -14,6 +14,7 @@ function App() {
       >
         <Link to="/"><b>Home</b></Link> |{" "}
         <Link to="/tablecomponent"><b>Pokedex</b></Link> |{" "}
+        <Link to="/TypeChecker"><b>Type Checker</b></Link> |{" "}
         <Link to='/details'><b>Detail</b></Link>
       </nav>
       <div id='outletDiv'>

@@ -1,0 +1,115 @@
+body {
+    background-color: #121212;
+    color: whitesmoke;
+}
+.container {
+    background-color: #202020;
+}
+.offcanvas {
+    background-color: #404040;
+}
+#closecanvas {
+    color: whitesmoke;
+}
+#typeSelectBtn{
+    text-align: right;
+}
+#currentTypesOnPage {
+    padding: 1em;
+    border-bottom: 1px solid whitesmoke;
+    text-align: center;
+}
+#current_types {
+    padding: 1em;
+}
+#available_types {
+    padding: 1em;
+    border-bottom: 1px solid whitesmoke;
+    text-align: center;
+}
+.resultHeader {
+    padding-top: 1em;
+    text-align: center;
+}
+.resultRow {
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 1em;
+    text-align: center;
+}
+#currentHeader {
+    text-align: center;
+}
+#currentButtons {
+    text-align: center;
+}
+.typeButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 6em;
+    border-color: whitesmoke;
+    color: whitesmoke;
+}
+.typeList {
+    text-align: center;
+    padding: .3em;
+}
+#none {
+    color: whitesmoke;
+}
+#normal {
+    background-color: grey;
+}
+#fire{
+    background-color: rgb(207, 136, 5);
+}
+#water{
+    background-color: rgb(73, 107, 170);
+}
+#electric{
+    color: rgb(58, 58, 58);
+    background-color:rgb(197, 168, 0);
+}
+#grass{
+    background-color: darkgreen;
+}
+#ice{
+    color:rgb(58, 58, 58);
+    background-color: rgb(93, 190, 158);
+}
+#fighting{
+    background-color: maroon;
+}
+#poison{
+    background-color: blueviolet;
+}
+#ground{
+    background-color: sienna;
+}
+#flying{
+    background-color: rgb(43, 80, 110);
+}
+#psychic{
+    background-color: rgb(177, 60, 177);
+}
+#bug{
+    background-color: rgb(66, 100, 10);
+}
+#rock{
+    background-color: brown;
+}
+#ghost{
+    background-color: slateblue;
+}
+#dragon{
+    background-color: rebeccapurple;
+}
+#dark{
+    background-color: darkslategrey;
+}
+#steel{
+    background-color: rgb(124, 124, 124);
+}
+#fairy {
+    background-color: rgb(163, 89, 101);
+}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import TableComponent from './TableComponent/TableComponent'
 import DetailPage from './DetailPage/DetailPage';
+import { TypeChecker } from './TypeChecker/TypeChecker';
 
 import './index.css';
 import App from './App';
@@ -32,6 +33,7 @@ root.render(
         <Route index element={<TestComponent />} />
         <Route path='tablecomponent' element={<TableComponent columns={columns} />} />
         <Route path='details' element={<DetailPage />} />
+        <Route path='typeChecker' element={<TypeChecker />} />
       </Route>
       <Route path='*' element={<App />} />
     </Routes>
