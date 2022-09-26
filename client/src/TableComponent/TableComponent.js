@@ -4,11 +4,12 @@ import DataGrid from 'react-data-grid';
 import { getPokemon } from '../graphQLQueries/pokemonQueries';
 
 export default function TableComponent({columns}) {
-    const [rows, getRows] = useState('')
-    const localhost = window.location.href.includes('localhost') ? 'http://localhost:5000' : ''
-    // checks for localhost
+    const [rows, setRows] = useState('')
 
     const getPokemonList = useCallback(async () => {
+        // checks for localhost
+        const localhost = window.location.href.includes('localhost') ? 'http://localhost:5000' : ''
+        
         // let res = await fetch(`${localhost}/pokemon`)
         let res = await fetch(`${localhost}/graphql`, {
             method:'POST',
@@ -19,11 +20,32 @@ export default function TableComponent({columns}) {
             body: JSON.stringify({ query: getPokemon()})
         })
         res = await res.json()
-        getRows(res.data.getPokemon)
+        setRows(res.data.getPokemon)
     }, [])
     useEffect(() => {
         getPokemonList()
     }, [getPokemonList])
 
-    return <DataGrid columns={columns} rows={rows} />;
+    // Allows you to write a custom function when setting rows
+    // In the onRowsChange property, can just use setRows if 
+    // Additional functionality is not required
+    const newSetRows = (rows, data) => {
+        setRows(rows, data)
+    }
+
+    return (
+        <div>
+            <DataGrid columns={columns} rows={rows} onRowsChange={newSetRows}/>
+            <button id='updateBtn'
+                type='button'
+                className='btn'
+                onClick={() => {
+                    console.log(rows)
+                }}
+                style={{color: 'white'}}
+            >
+                Update
+            </button>
+        </div>
+    )
 }

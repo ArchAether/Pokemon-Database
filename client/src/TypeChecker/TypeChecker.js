@@ -41,7 +41,7 @@ class TypeButton extends React.Component {
 
 function WeaknessDisplay(props) {
     var listOfWeaknesses = props.list.map((number) =>
-    <button className='typeButton btn' id={number}>{number}</button>)
+    <button className='typeButton btn' id={number} key={number.toString()}>{number}</button>)
         return listOfWeaknesses
 }
 
@@ -132,8 +132,8 @@ export class TypeChecker extends React.Component {
     }
 
     changeType(type) {
-        if((this.state.selected1 != type) && (this.state.selected2 != type)) {
-            if(this.state.selected1 == "none") {
+        if((this.state.selected1 !== type) && (this.state.selected2 !== type)) {
+            if(this.state.selected1 === "none") {
                 this.setState((state) => ({
                     selected1: type
                 }))
@@ -153,7 +153,7 @@ export class TypeChecker extends React.Component {
         console.log("state: " + this.state.effectivenessList.toString())
     }
     resetType(i) {
-        if(i == 0) {
+        if(i === 0) {
             this.setState({
                 selected1: this.state.selected2,
                 selected2: "none"
@@ -199,7 +199,8 @@ export class TypeChecker extends React.Component {
                     break
                 case 0:
                     immune.push(typeNames[index])
-                
+                    break
+                default:
             }
         })
         effectivenessList.push(weakness_x2)
